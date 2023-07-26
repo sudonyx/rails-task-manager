@@ -11,6 +11,10 @@
   </head>
 
   <body>
+    <div class="nav-bar">
+      <%= link_to '🔙', "root", class: 'link' %>
+      <%= link_to '🆕', "/tasks/new", class: 'link' %>
+    </div>
     <%= yield %>
   </body>
 </html>
