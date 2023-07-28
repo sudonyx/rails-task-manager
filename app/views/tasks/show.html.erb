@@ -1,5 +1,13 @@
 <h1>Show</h1>
 
-<%= @task.completed %>
-<%= @task.title %>
-<%= @task.details %>
+<p>
+  <% if @task.completed %>
+    <i class="fa-regular fa-square-check"></i>
+  <% else %>
+    <i class="fa-regular fa-square"></i>
+  <% end %>
+  <%= @task.title %>: <%= @task.details %>
+</p>
+
+
+<p><%= link_to 'Edit item', edit_path(@task) %></p>

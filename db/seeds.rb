@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+require 'faker'
+
+10.times do
+  title = "#{Faker::Verb.base.capitalize} #{Faker::Adjective.negative} #{Faker::Appliance.equipment.downcase}"
+  details = Faker::Movies::Lebowski.quote
+  completed = rand > 0.5
+
+  Task.create({ title:, details:, completed: })
+end
